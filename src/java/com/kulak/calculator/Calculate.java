@@ -16,7 +16,11 @@ public class Calculate {
         while (true) {
             String[] parameters = ConsoleReader.readExpression(System.in);
             if (parameters.length == 3) {
-                System.out.println(Operation.execute(parameters));
+                try {
+                    System.out.println(Operation.execute(parameters));
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
             }
         }
     }
